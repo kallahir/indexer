@@ -1,11 +1,19 @@
 # Indexer
 
-Indexer é um desafio em Ruby on Rails que visa o desenvovilmento de uma API REST.
+Indexer é um desafio em Ruby on Rails que visa o desenvolvimento de uma API REST.
 
 Essa API deverá possuir dois endpoints:
 
 * O primeiro endpoint é responsável por receber uma URL que indexará as tags HTML h1, h2 e h3;
 * O segundo endpoint é responsável por retornar todos os dados já indexidos.
+
+## Descrição da solução
+
+Para facilitar na recuperação das informações todas as URLs foram consideradas HTTP e aquelas que faziam uso do protocolo HTTPS eram devidamente redirecionadas na hora da sua abertura.
+
+A padronização das URLs como HTTP, ajudou também a evitar que informções duplicadas ficassem salvas no banco de dados, pois as tags da URL http://www.jovemnerd.com.br são as mesmas da URL https://www.jovemnerd.com.br, pois essas duas URLs por fim apontam para um único lugar.
+
+O processo de extração das tags do HTML foi feito usando um método que recebe o contéudo da página e a tag a ser salva, a grande vantagem dessa abordagem é que se futuramente o usuário quiser expandir as tags procuradas isso poderá ser facilmente implementado alterando o array de tags a ser pesquisa. Isso abre também a possibilidade do endpoint no futuro receber um array de tags as quais o usuário deseja procurar.
 
 ## Pré-requisitos
 
@@ -59,8 +67,10 @@ http://localhost:3000/tags
 
 ## Executando os testes
 
+Os testes foram criados usando o RSpec, a seguir está o comando necessáriso para execucação dos testes:
+
 ```
-EM DESENVOLVIMENTO...
+bundle exec rspec
 ```
 
 ## Construído com
