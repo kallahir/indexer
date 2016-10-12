@@ -67,7 +67,9 @@ http://localhost:3000/tags
 
 ## Executando os testes
 
-Os testes foram criados usando o RSpec, a seguir está o comando necessáriso para execucação dos testes:
+Os testes foram criados usando o RSpec. 
+
+A seguir está o comando necessário para execucação dos testes:
 
 ```
 bundle exec rspec
