@@ -1,24 +1,59 @@
-# README
+# Indexer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Indexer é um desafio em Ruby on Rails que visa o desenvovilmento de uma API REST.
 
-Things you may want to cover:
+Essa API deverá possuir dois endpoints:
 
-* Ruby version
+* O primeiro endpoint é responsável por receber uma URL que indexará as tags HTML h1, h2 e h3;
+* O segundo endpoint é responsável por retornar todos os dados já indexidadas.
 
-* System dependencies
+## Getting Started
 
-* Configuration
+Para que o projeto consiga ser executado será necessário seguir os passos abaixo:
 
-* Database creation
+### Pré-requisitos
 
-* Database initialization
+Você deverá ter instalado no seu computador os seguintes componentes;
 
-* How to run the test suite
+* Ruby, no mínimo a versão 2.2.2
+* Rails 5.0
 
-* Services (job queues, cache servers, search engines, etc.)
+### Instalando
 
-* Deployment instructions
+Com os pré-requisitos configurados execute os seguintes passos:
 
-* ...
+No pasta do respositório clonado:
+
+```
+bundle install
+rake db:create db:migrate
+```
+
+Para executar o servidor:
+
+```
+rails server
+```
+
+## Executando os testes
+
+```
+EM DESENVOLVIMENTO...
+```
+
+### Break down into end to end tests
+
+EM DESENVOLVIMENTO...
+
+```
+EM DESENVOLVIMENTO...
+```
+
+## Construído com
+
+* TextMate - editor de texto para macOS
+* Postman - ferramenta para realizar requisições HTTP
+
+## Autor
+
+* **Itallo Rossi**
