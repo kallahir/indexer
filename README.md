@@ -31,6 +31,33 @@ Para executar o servidor:
 rails server
 ```
 
+### Fazendo uso da API REST
+
+#### Primeiro endpoint
+
+O primeiro endpoint responsável por indexar as URLs, poderá ser acessado usando o método POST no seguinte caminho:
+
+```
+http://localhost:3000/urls
+
+```
+
+O JSON a seguir deve ser passado como parametro:
+
+```
+{
+	"url_path": "https://www.URL_DESEJADA.com.br"
+}
+```
+
+#### Segundo endpoint
+
+O segundo endpoint responsável por retornar os dados indexados, poderá ser acessado usando o método GET no seguinte caminho:
+
+```
+http://localhost:3000/tags
+```
+
 ## Executando os testes
 
 ```
