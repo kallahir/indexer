@@ -3,19 +3,31 @@ require 'open_uri_redirections'
 
 class UrlsController < ApplicationController
 
-  # validar url de entrada
-  # validar se url já foi indeixada (http,https)
-  # validar json de entrada
   def create
-    unless params[:url_path].downcase.start_with?('http://','https://')
-      render json: {error: "invalid url"}
+    #1. verificar se o json é valido
+    if params.has_key?(:url_path) == false
+      render json: {error: "invalid json"}
       return
     end
     
+    #2. verificar se url é valida
+    #2.1. verificar se url começa com http/https
+    unless params[:url_path].downcase.start_with?('http://','https://')
+      render json: {error: "invalid url (missing HTTP or HTTPS)"}
+      return
+    end
+    
+    #2.2. verificar se url já foi indexida
+    if Url.find_by(url_path: params[:url_path]) != nil
+      render json: {error: "url already indexed"}
+      return
+    end
+    
+    #3. extrair tags da url
     begin
       url_content = Nokogiri::HTML(open(params[:url_path], allow_redirections: :all))
     rescue Errno::ENOENT, SocketError
-      render json: {error: "invalid url"}
+      render json: {error: "url not found"}
       return
     end
     
