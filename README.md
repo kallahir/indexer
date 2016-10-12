@@ -39,10 +39,9 @@ O primeiro endpoint responsável por indexar as URLs, poderá ser acessado usand
 
 ```
 http://localhost:3000/urls
-
 ```
 
-O JSON a seguir deve ser passado como parametro:
+O JSON a seguir deve ser passado como parâmetro:
 
 ```
 {
