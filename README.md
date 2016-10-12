@@ -5,22 +5,18 @@ Indexer é um desafio em Ruby on Rails que visa o desenvovilmento de uma API RES
 Essa API deverá possuir dois endpoints:
 
 * O primeiro endpoint é responsável por receber uma URL que indexará as tags HTML h1, h2 e h3;
-* O segundo endpoint é responsável por retornar todos os dados já indexidadas.
+* O segundo endpoint é responsável por retornar todos os dados já indexidos.
 
-## Getting Started
+## Pré-requisitos
 
-Para que o projeto consiga ser executado será necessário seguir os passos abaixo:
-
-### Pré-requisitos
-
-Você deverá ter instalado no seu computador os seguintes componentes;
+Para executar o projeto e os testes será necessário ter instalado na sua máquina:
 
 * Ruby, no mínimo a versão 2.2.2
 * Rails 5.0
 
-### Instalando
+## Executando o projeto
 
-Com os pré-requisitos configurados execute os seguintes passos:
+Com os pré-requisitos configurados execute os passos a seguir.
 
 No pasta do respositório clonado:
 
@@ -36,14 +32,6 @@ rails server
 ```
 
 ## Executando os testes
-
-```
-EM DESENVOLVIMENTO...
-```
-
-### Break down into end to end tests
-
-EM DESENVOLVIMENTO...
 
 ```
 EM DESENVOLVIMENTO...
