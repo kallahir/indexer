@@ -12,16 +12,13 @@
 
 ActiveRecord::Schema.define(version: 20161011004111) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "tags", force: :cascade do |t|
     t.text     "tag_content"
     t.string   "tag_type"
     t.integer  "url_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["url_id"], name: "index_tags_on_url_id", using: :btree
+    t.index ["url_id"], name: "index_tags_on_url_id"
   end
 
   create_table "urls", force: :cascade do |t|
